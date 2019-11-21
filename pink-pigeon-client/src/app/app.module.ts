@@ -13,10 +13,12 @@ import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
 import { EntityDataModule } from '@ngrx/data';
 import { entityConfig } from './entity-metadata';
+import { EntityListModule } from './entity-list/entity-list.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,9 @@ import { entityConfig } from './entity-metadata';
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([AppEffects]),
-    EntityDataModule.forRoot(entityConfig)
+    EntityDataModule.forRoot(entityConfig),
+    MatToolbarModule,
+    EntityListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
