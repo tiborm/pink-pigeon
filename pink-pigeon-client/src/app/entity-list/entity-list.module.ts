@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { EntityListComponent } from './entity-list.component';
 import { MatList, MatListItem } from '@angular/material/list';
-import { MatRippleModule } from '@angular/material';
+import { MatRippleModule } from '@angular/material/core';
 import { AsyncPipe } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 

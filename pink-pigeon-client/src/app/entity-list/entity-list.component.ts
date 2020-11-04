@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { TrackedEntityModel, BasicUnit, TrackingInterval } from '../entities/tracked-entity.model';
 import { of, Observable } from 'rxjs';
 import TrackedEntityFactory from '../entities/tracked-entity.factory';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid/';
 
 @Component({
   selector: 'app-entity-list',
